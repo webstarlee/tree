@@ -258,7 +258,16 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!-- end::Horizontal Menu -->
 								</div>
 							</div>
-							<div class="m-content" style="padding: 50px 25px;">
+							<div class="m-subheader " style="padding: 25px 25px 0;">
+								<div class="d-flex align-items-center">
+									<div class="mr-auto">
+										<h3 class="m-subheader__title ">
+											@yield('pageTitle')
+										</h3>
+									</div>
+								</div>
+							</div>
+							<div class="m-content" style="padding: 25px;">
 								@yield('content')
 							</div>
 						</div>

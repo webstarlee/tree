@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('title')
-Infomation
+Favorite Trees
+@endsection
+@section('pageTitle')
+Favorite Trees
 @endsection
 @section('content')
     <div class="m-portlet m-portlet--mobile">

@@ -2,6 +2,9 @@
 @section('title')
 Infomation
 @endsection
+@section('pageTitle')
+Infomation
+@endsection
 @section('content')
     <div class="m-portlet m-portlet--mobile">
 		<div class="m-portlet__head">

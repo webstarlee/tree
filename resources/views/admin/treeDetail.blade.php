@@ -270,41 +270,9 @@ Tree Detail
                     </div>
                     <div class="tab-pane" id="m_tree_info-review">
                         <div class="m-portlet__body">
-                            <div class="form-group m-form__group row">
-                                <div class="col-12">
-                                    <form class="m-form m-form--fit m-form--label-align-right" action="" method="post">
-                                        {{csrf_field()}}
-                                        <div class="form-group m-form__group row">
-            								<label for="example-text-input" class="col-lg-2 col-md-2 col-sm-3 col-xs-12 col-form-label">
-            									Surname
-            								</label>
-            								<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-            									<input class="form-control m-input" type="text" name="lastName" value="" />
-            								</div>
-            							</div>
-                                        <div class="form-group m-form__group row">
-            								<label for="example-text-input" class="col-lg-2 col-md-2 col-sm-3 col-xs-12col-form-label">
-            									Full name
-            								</label>
-            								<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-            									<input class="form-control m-input" type="text" name="firstName" value="" />
-            								</div>
-            							</div>
-                                        <div class="form-group m-form__group row">
-            								<label for="example-text-input" class="col-lg-2 col-md-2 col-sm-3 col-xs-12 col-form-label">
-            									Birthday
-            								</label>
-            								<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-            									<input class="form-control m-input input_mask_date" id="m_profile_birth" placeholder="birthday" type="text" name="birth" value="" />
-            								</div>
-            							</div>
-                                        <div class="form-group m-form__group row">
-                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12"></div>
-        									<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-        										<button type="submit" class="btn btn-outline-accent m-btn m-btn--custom m-btn--air">Save Change</button>
-        									</div>
-            							</div>
-                                    </form>
+                            <div class="form-group m-form__group">
+                                <div class="m-widget3">
+                                    @include('user.treeReview')
                                 </div>
                             </div>
                         </div>
