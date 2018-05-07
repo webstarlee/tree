@@ -1,8 +1,8 @@
 .m-body {
-    background: #fff;
+    background: #f2f2f2;
 }
 .company-main-logo-img {
-    max-width: 200px;
+    max-width: 250px;
 }
 .m-card-user.m-card-user--skin-dark .m-card-user__details .m-card-user__email {
     color: #ffffff!important;
@@ -48,9 +48,8 @@
     padding: 0;
 }
 .ifund-slider-container {
-    padding: 30px;
-    background-color: #c3c8ce;
-    border-top: 4px solid #fff;
+    padding: 15px;
+    background-color: #fff;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
@@ -241,49 +240,6 @@
         background-position: center;
         background-repeat: no-repeat;
         color: #fff;
-    }
-    .m-grid__item.m-body__nav {
-        height: 45px;
-        box-shadow: none;
-        position: relative;
-        background-color: #fff;
-    }
-    .m-header-menu .m-menu__nav > .m-menu__item > .m-menu__link .m-menu__link-text {
-        font-size: 12px;
-        color: #000;
-        font-family: verdana;
-    }
-    .m-header-menu .m-menu__nav > .m-menu__item > .m-menu__link .m-menu__link-text:hover {
-        color: #32119c!important;
-    }
-    .ifundfilm-nav-flex {
-        display: flex!important;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .m-grid__item.m-body__nav::after {
-        content: "";
-        height: 1px;
-        width: 100%;
-        background-image: url('/assets/images/goldfade.gif');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .m-grid__item.m-body__nav::before {
-        content: "";
-        height: 1px;
-        width: 100%;
-        background-image: url('/assets/images/goldfade.gif');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
     }
 }
 @media (max-width: 994px) {

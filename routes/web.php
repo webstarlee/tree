@@ -37,9 +37,7 @@ Route::get('/js/language.js', function(){
     echo('window.i18n = ' . json_encode($strings) . ';');
     exit();
 });
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+
 Route::get('/404', function () {
     return view('404');
 })->name('404');
@@ -61,30 +59,30 @@ Route::post('logout', 'User\Auth\LoginController@logout')->name('logout');
 
 // Password Reset Routes...
 Route::get('password/reset', 'User\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-Route::get('clientid/get', 'User\Auth\LoginController@showClientRequestForm')->name('clientid.get');
 Route::post('password/email', 'User\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::get('password/reset/{token}', 'User\Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'User\Auth\ResetPasswordController@reset');
-Route::get('check-client-id/{id}', 'User\Auth\LoginController@checkClientId');
 //register
 Route::get('register', 'User\Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'User\Auth\RegisterController@register');
 
-Route::get('/dashboard', 'User\UserController@index')->name('dashboard');
-Route::get('/contact', 'User\UserController@contact')->name('contact');
-Route::get('/film', 'User\UserController@film')->name('film');
-Route::get('/how-it-work', 'User\UserController@howItWork')->name('howitowork');
-Route::get('/profile', 'User\UserController@profile')->name('profile');
-Route::post('/profile/update/avatar', 'User\UserController@profileUpdateAvatar')->name('profile.update.avatar');
-Route::post('/profile/update/cover', 'User\UserController@profileUpdateCover')->name('profile.update.avatar');
-Route::get('profile/username/validater/{newusername}', 'User\UserController@usernameValidate');
-Route::get('profile/email/validater/{newemail}', 'User\UserController@emailValidate');
-Route::post('profile/update/unique', 'User\UserController@updateEmployeeUnique');
-Route::post('profile/update/info', 'User\UserController@updateEmployeeInfo');
-Route::post('profile/update/password', 'User\UserController@updateEmployeePassOwn');
-
 Route::middleware(['auth'])->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('welcome');
     Route::get('/dashboard', 'User\UserController@index')->name('dashboard');
+    Route::get('/dashboard', 'User\UserController@index')->name('dashboard');
+    Route::get('/contact', 'User\UserController@contact')->name('contact');
+    Route::get('/tree/info', 'User\UserController@film')->name('tree.info');
+    Route::get('/tree/favorite', 'User\UserController@howItWork')->name('favorite');
+    Route::get('/profile', 'User\UserController@profile')->name('profile');
+    Route::post('/profile/update/avatar', 'User\UserController@profileUpdateAvatar')->name('profile.update.avatar');
+    Route::post('/profile/update/cover', 'User\UserController@profileUpdateCover')->name('profile.update.avatar');
+    Route::get('profile/username/validater/{newusername}', 'User\UserController@usernameValidate');
+    Route::get('profile/email/validater/{newemail}', 'User\UserController@emailValidate');
+    Route::post('profile/update/unique', 'User\UserController@updateEmployeeUnique');
+    Route::post('profile/update/info', 'User\UserController@updateEmployeeInfo');
+    Route::post('profile/update/password', 'User\UserController@updateEmployeePassOwn');
 });
 
 Route::prefix('admin')->group(function () {
@@ -125,9 +123,9 @@ Route::prefix('admin')->group(function () {
         Route::get('manage/delete/employee/{uniqueid}', 'Admin\adminController@deleteEmployee');
         //end
         //video management
-        Route::get('manage/video', 'Admin\VideoController@viewVideo')->name('admin.manage.video');
-        Route::get('manage/video/getdatas', 'Admin\VideoController@getVideoData');
-        Route::post('manage/new/video', 'Admin\VideoController@storeVideo')->name('admin.add.new.video');
+        Route::get('manage/tree', 'Admin\VideoController@viewVideo')->name('admin.manage.video');
+        Route::get('manage/tree/getdatas', 'Admin\VideoController@getVideoData');
+        Route::post('manage/new/tree', 'Admin\VideoController@storeVideo')->name('admin.add.new.video');
         Route::post('manage/update/video', 'Admin\VideoController@updateVideo')->name('admin.update.video');
         Route::get('manage/get-video/{id}', 'Admin\VideoController@getSingleVideo');
         Route::get('manage/delete/video/{id}', 'Admin\VideoController@deleteVideo');

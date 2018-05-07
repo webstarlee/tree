@@ -3,13 +3,7 @@
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<?php
-			$setting_count = \App\Setting::where('id', 1)->count();
-			if ($setting_count > 0) {
-				$setting = \App\Setting::where('id', 1)->first();
-			}
-		?>
-		<title>@if ($setting_count > 0 ) {{$setting->app_name}} @else HR @endif | 404</title>
+		<title>Tree of Miami | 404</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +22,7 @@
         <link href="/assets/plugins/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="/assets/plugins/baseApp/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="/assets/images/logo/favicon.ico" />
+		<link rel="shortcut icon" href="/assets/images/logo/tree_fav_logo.ico" />
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->

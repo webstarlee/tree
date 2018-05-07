@@ -3,13 +3,7 @@
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<?php
-			$setting_count = \App\Setting::where('id', 1)->count();
-			if ($setting_count > 0) {
-				$setting = \App\Setting::where('id', 1)->first();
-			}
-		?>
-		<title>@if ($setting_count > 0 ) {{$setting->app_name}} @else @lang('language.title') @endif | @yield('title')</title>
+		<title>Tree of miami Admin | @yield('title')</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,19 +24,19 @@
 		<link href="/assets/plugins/base/style.bundle.css" rel="stylesheet" type="text/css" />
         <link href="/css/loader.css" rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="/assets/images/favicon/fav_ico.png" />
+		<link rel="shortcut icon" href="/assets/images/logo/tree_fav_logo.png" />
 	</head>
   <body class="m--skin- m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
 		{{-- start loading --}}
 		<div class="loader-container circle-pulse-multiple">
-				<div class="loaders">
-						<div id="loading-center-absolute">
-								<div class="object" id="object_four"></div>
-								<div class="object" id="object_three"></div>
-								<div class="object" id="object_two"></div>
-								<div class="object" id="object_one"></div>
-						</div>
+			<div class="loaders">
+				<div id="loading-center-absolute">
+					<div class="object" id="object_four"></div>
+					<div class="object" id="object_three"></div>
+					<div class="object" id="object_two"></div>
+					<div class="object" id="object_one"></div>
 				</div>
+			</div>
 		</div>
 		{{-- end loading --}}
 		<!-- begin:: Page -->
@@ -52,7 +46,7 @@
 					<div class="m-login__container">
 						<div class="m-login__logo">
 							<a href="javascript:;">
-								<img src="/assets/images/logo/logo.png">
+								<img src="/assets/images/logo/tree_logo.png" style="width: 100%;">
 							</a>
 						</div>
 						@yield('content')

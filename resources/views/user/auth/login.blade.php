@@ -1,50 +1,41 @@
-@extends('layouts.app')
+@extends('layouts.appAuth')
 @section('title')
 join
 @endsection
 @section('content')
-    <div class="m-auth-container">
+    <div class="m-login__signin">
         <div class="m-login__head">
             <h3 class="m-login__title">
                 Login
             </h3>
         </div>
-        <form class="m-login__form m-form" action="{{route('login')}}" method="post">
+        <form class="m-login__form m-form" action="{{route('login')}}">
             <div class="form-group m-form__group">
-                <div class="input-group m-input-group m-input-group--air">
-                    <span class="input-group-addon">
-                        <i class="la la-envelope"></i>
-                    </span>
-                    <input type="email" class="form-control m-input" name="email" placeholder="Email*" aria-describedby="basic-addon1">
-                </div>
+                <input class="form-control m-input" type="text" placeholder="Email" name="email" autocomplete="off">
             </div>
             <div class="form-group m-form__group">
-                <div class="input-group m-input-group m-input-group--air">
-                    <span class="input-group-addon">
-                        <i class="la la-key"></i>
-                    </span>
-                    <input type="password" class="form-control m-input" name="password" placeholder="Password*" aria-describedby="basic-addon1">
-                </div>
+                <input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
             </div>
             <div class="row m-login__form-sub">
                 <div class="col m--align-left m-login__form-left">
-                    <label class="m-checkbox  m-checkbox--focus">
+                    <label class="m-checkbox  m-checkbox--light" style="color: #fff;">
                         <input type="checkbox" name="remember">
                         Remember me
                         <span></span>
                     </label>
                 </div>
                 <div class="col m--align-right m-login__form-right">
-                    <a href="/password/reset" class="m-link">
+                    <a href="javascript:;" id="m_login_forget_password" class="m-link" style="color: #fff;">
                         Forget Password ?
                     </a>
                 </div>
             </div>
-			<div class="m-login__form-action">
-                <button type="submit" id="m_login_signin_submit" class="btn btn-focus m-btn btn-outline-accent m-btn--custom m-btn--air">
-					Login
-				</button>
-			</div>
+            <div class="m-login__form-action">
+                <button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air  m-login__btn m-login__btn--primary">
+                    Log In
+                </button>
+            </div>
+
             <div class="m-login__account">
 				<span class="m-login__account-msg">
 					Don't have an account yet ?
@@ -54,9 +45,6 @@ join
 					Sign Up
 				</a>
 			</div>
-		</form>
+        </form>
     </div>
-@endsection
-@section('custom_js')
-<script type="text/javascript" src="/js/login.js"></script>
 @endsection

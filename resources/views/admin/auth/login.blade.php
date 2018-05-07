@@ -4,6 +4,11 @@
 @endsection
 @section('content')
     <div class="m-login__signin">
+        <div class="m-login__head">
+            <h3 class="m-login__title">
+                Login to Admin
+            </h3>
+        </div>
         <form class="m-login__form m-form" action="{{route('admin.login')}}">
             <div class="form-group m-form__group">
                 <input class="form-control m-input"   type="text" placeholder="Email" name="email" autocomplete="off">

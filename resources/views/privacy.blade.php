@@ -16,10 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<?php
-			$setting = \App\Setting::where('id', 1)->first();
-		?>
-		<title>{{$setting->app_name}} | Privacy</title>
+		<title>Tree of Miami | Privacy</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -78,11 +75,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo">
 									<a href="{{route('dashboard')}}" class="m-brand__logo-wrapper">
-										@if (file_exists('uploads/logos/'.$setting->logo_img))
-											<img src="{{asset('uploads/logos/'.$setting->logo_img)}}" class="company-main-logo-img" alt="author">
-										@else
-											<img alt="" src="/assets/images/logo/logo.png" class="company-main-logo-img" />
-										@endif
+										<img alt="" src="/assets/images/logo/tree_logo.png" class="company-main-logo-img" />
 									</a>
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -126,116 +119,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="m-grid__item m-grid__item--fluid m-wrapper">
 							<div class="m-content" style="padding:30px;">
 								<div class="header">
-				                  <p align="left">
-									<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									&nbsp; <font size="3"><b>Privacy Policy of iFundFilms</b><img border="0" src="/assets/images/privacy_image.jpg" alt="ifundfilms_privacy_policy" width="321" height="216" align="right"></font><strong style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%; font-weight:400"><font size="4" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 12pt; line-height: 22.1px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">™</font></strong><br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									Introduction<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									iFundFilms, LLC, (herein known as iFundFilms™) is sensitive
-									to your privacy on the Internet. It is crucial that you know
-									the methods in which information is treated while you are
-									visiting iFundFilms™. Users should be aware of information
-									collected, how that information is used and under the
-									circumstances in which it could be disclosed. We will update
-									this policy when necessary and shall place the new date
-									below.<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									&nbsp; </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									Information &amp; Collection Use<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									In order to peruse this website, visitors shall not be
-									required to complete any registration form. In general, you
-									can visit iFundFilms™ on the World Wide Web without telling
-									us who you are or revealing any personal information about
-									yourself. Our servers do collect IP addresses but gathers no
-									e-mail addresses of visitors. This information may be used
-									to measure the number of visits and the average time which
-									might be spent on the site or how many pages viewed, etc.
-									iFundFilms™ may use this information to measure the use of
-									our site and to improve the content presented within. We
-									maintain physical, electronic and procedural safeguards that
-									comply with federal regulations to guard your non-public
-									personal information.<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									&nbsp; </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									Registration is not required to visit our site. We respect
-									all site visitors’ right to their personal privacy. We only
-									collect and use information on our website as disclosed
-									within iFundFilms™ Privacy Policy. This statement shall
-									apply solely to the information collected on this website.
-									This site collects cookies.<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									&nbsp; </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									Personal information we collect is only collected upon
-									subscription to our service or service purchases. Anonymity
-									is removed for registrants and participants making income
-									from our site or paying for services to a provider.
-									Registrants who make income from our site, in the event of
-									advertising, shall be solely responsible for their own taxes
-									from any such earnings, regardless of the amount earned on
-									our site.<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									&nbsp; </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									During the download process a user is not required to
-									provide personal information and we will never sell or give
-									away any information to other organizations for commercial
-									gain. In the event of advertising on our site we may collect
-									information from you, whereby proper identification from
-									registrant is required during the advertising registration
-									process.<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									&nbsp; </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									We may disclose your information as required by law or to
-									our select and trusted developers or subcontractors. Such
-									developers or contractors should respect your information as
-									confidential. </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									If you are asked for usernames or passwords which you
-									believe may not originate from iFundFilms™ do not reply.
-									This policy is to make its best attempt to ensure that
-									confidential information, which you may provide, is not
-									given out that may compromise privacy for you or other
-									iFundFilms™ members.<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									&nbsp; </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									iFundFilms™ does not collect any donation or credit card
-									information directly on our site but you will be directed to
-									a third party payment processor, known as PayPal, where you
-									may submit donation and credit card information. iFundFilms™
-									does not maintain any permanent or temporary credit card
-									information on our Internet server. All transactions are
-									encrypted using PayPal encryption and travel over a Secure
-									Socket Layer (SSL) server through the PayPal service. Users
-									should visit PayPal for their policies and procedures. </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									The Corporate Website may contain links to other sites such
-									as provider’s pages or other affiliates. While we try to
-									link only with sites that share our privacy standards, we
-									cannot be liable for the content or the privacy practices
-									which may be implemented on any other site(s). Users should
-									read &amp; understand the privacy policies of other sites they
-									visit as a result of linking through iFundFilms™. </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									iFundFilms™ reserves the right to modify this policy at any
-									time without further notice but we will post the date of any
-									updates. Users should check back occasionally for any
-									updates to this policy.<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									&nbsp; </p>
-									<p align="left" style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 10px; padding: 0px; background-color: transparent">
-									Copyright and Trademark Notice<br style="color: rgb(102, 102, 102); font-family: Tahoma,Geneva,sans-serif; font-size: 13px; line-height: 22.1px; margin: 0px; padding: 0px; background-color: transparent; background-image: none; background-repeat: repeat; background-position: 0% 0%">
-									The contents of all material available on this website are
-									copyrighted by iFundFilms, LLC All rights reserved and
-									content may not be in full or in part --reproduced,
-									published, disseminated, downloaded, or transferred in any
-									form or by any means, even electronically, except with the
-									prior written permission of iFundFilms, LLC Copyright
-									infringement is a violation of federal law and subject to
-									criminal and civil penalties. Further legal notice can be
-									found in the company&#39;s Terms &amp; Conditions.<br>
-									<br>
-									Last Update; February 09, 2018
+									<p>Write your privacy policy in here</p>
 								</div>
 							</div>
 						</div>

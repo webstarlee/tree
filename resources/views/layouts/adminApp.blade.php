@@ -3,10 +3,7 @@
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<?php
-			$setting = \App\Setting::where('id', 1)->first();
-		?>
-		<title>{{$setting->app_name}} | @yield('title')</title>
+		<title>Tree of miami | @yield('title')</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,11 +30,7 @@
 		{{-- begine::custom style --}}
 		@yield('customStyle')
 		{{-- end::custom style --}}
-		@if (file_exists('uploads/logos/'.$setting->logo_fav))
-			<link rel="shortcut icon" href="{{asset('uploads/logos/'.$setting->logo_fav)}}" />
-		@else
-			<link rel="shortcut icon" href="/assets/images/logo/logo_compact.png" />
-		@endif
+		<link rel="shortcut icon" href="/assets/images/logo/tree_fav_logo.png" />
 	</head>
     <!-- end::Head -->
     <!-- begin::Body -->
@@ -66,11 +59,7 @@
 								<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
 										<a href="{{route('admin.dashboard')}}" class="m-brand__logo-wrapper">
-			                                @if (file_exists('uploads/logos/'.$setting->logo_img))
-			                                    <img src="{{asset('uploads/logos/'.$setting->logo_img)}}" class="company-main-logo-img" alt="author">
-			                                @else
-			                                    <img alt="" src="/assets/images/logo/logo.png" class="company-main-logo-img" />
-			                                @endif
+			                                   <img alt="" src="/assets/images/logo/tree_logo.png" class="company-main-logo-img" />
 										</a>
 									</div>
 									<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -94,276 +83,6 @@
 								<div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
 									<div class="m-stack__item m-topbar__nav-wrapper">
 										<ul class="m-topbar__nav m-nav m-nav--inline">
-											<li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width" data-dropdown-toggle="click" data-dropdown-persistent="true">
-												<a href="javascript:;" class="m-nav__link m-dropdown__toggle" id="">
-													<span class="m-nav__link-badge m-badge m-badge--dot m-badge--dot-small m-badge--danger"></span>
-													<span class="m-nav__link-icon">
-														<span class="m-nav__link-icon-wrapper">
-															<i class="flaticon-music-2"></i>
-														</span>
-													</span>
-												</a>
-												<div class="m-dropdown__wrapper">
-													<span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
-													<div class="m-dropdown__inner">
-														<div class="m-dropdown__header m--align-center" style="background: url(/assets/images/notification_bg.jpg); background-size: cover;">
-															<span class="m-dropdown__header-title">
-																9 New
-															</span>
-															<span class="m-dropdown__header-subtitle">
-																User Notifications
-															</span>
-														</div>
-														<div class="m-dropdown__body">
-															<div class="m-dropdown__content">
-																<ul class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--brand" role="tablist">
-																	<li class="nav-item m-tabs__item">
-																		<a class="nav-link m-tabs__link active" data-toggle="tab" href="#topbar_notifications_notifications" role="tab">
-																			Alerts
-																		</a>
-																	</li>
-																	<li class="nav-item m-tabs__item">
-																		<a class="nav-link m-tabs__link" data-toggle="tab" href="#topbar_notifications_events" role="tab">
-																			Events
-																		</a>
-																	</li>
-																	<li class="nav-item m-tabs__item">
-																		<a class="nav-link m-tabs__link" data-toggle="tab" href="#topbar_notifications_logs" role="tab">
-																			Logs
-																		</a>
-																	</li>
-																</ul>
-																<div class="tab-content">
-																	<div class="tab-pane active" id="topbar_notifications_notifications" role="tabpanel">
-																		<div class="m-scrollable" data-scrollable="true" data-max-height="250" data-mobile-max-height="200">
-																			<div class="m-list-timeline m-list-timeline--skin-light">
-																				<div class="m-list-timeline__items">
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge -m-list-timeline__badge--state-success"></span>
-																						<span class="m-list-timeline__text">
-																							12 new users registered
-																						</span>
-																						<span class="m-list-timeline__time">
-																							Just now
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge"></span>
-																						<span class="m-list-timeline__text">
-																							System shutdown
-																							<span class="m-badge m-badge--success m-badge--wide">
-																								pending
-																							</span>
-																						</span>
-																						<span class="m-list-timeline__time">
-																							14 mins
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge"></span>
-																						<span class="m-list-timeline__text">
-																							New invoice received
-																						</span>
-																						<span class="m-list-timeline__time">
-																							20 mins
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge"></span>
-																						<span class="m-list-timeline__text">
-																							DB overloaded 80%
-																							<span class="m-badge m-badge--info m-badge--wide">
-																								settled
-																							</span>
-																						</span>
-																						<span class="m-list-timeline__time">
-																							1 hr
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge"></span>
-																						<span class="m-list-timeline__text">
-																							System error -
-																							<a href="#" class="m-link">
-																								Check
-																							</a>
-																						</span>
-																						<span class="m-list-timeline__time">
-																							2 hrs
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item m-list-timeline__item--read">
-																						<span class="m-list-timeline__badge"></span>
-																						<span href="" class="m-list-timeline__text">
-																							New order received
-																							<span class="m-badge m-badge--danger m-badge--wide">
-																								urgent
-																							</span>
-																						</span>
-																						<span class="m-list-timeline__time">
-																							7 hrs
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item m-list-timeline__item--read">
-																						<span class="m-list-timeline__badge"></span>
-																						<span class="m-list-timeline__text">
-																							Production server down
-																						</span>
-																						<span class="m-list-timeline__time">
-																							3 hrs
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge"></span>
-																						<span class="m-list-timeline__text">
-																							Production server up
-																						</span>
-																						<span class="m-list-timeline__time">
-																							5 hrs
-																						</span>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="tab-pane" id="topbar_notifications_events" role="tabpanel">
-																		<div class="m-scrollable" m-scrollabledata-scrollable="true" data-max-height="250" data-mobile-max-height="200">
-																			<div class="m-list-timeline m-list-timeline--skin-light">
-																				<div class="m-list-timeline__items">
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge m-list-timeline__badge--state1-success"></span>
-																						<a href="" class="m-list-timeline__text">
-																							New order received
-																						</a>
-																						<span class="m-list-timeline__time">
-																							Just now
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge m-list-timeline__badge--state1-danger"></span>
-																						<a href="" class="m-list-timeline__text">
-																							New invoice received
-																						</a>
-																						<span class="m-list-timeline__time">
-																							20 mins
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge m-list-timeline__badge--state1-success"></span>
-																						<a href="" class="m-list-timeline__text">
-																							Production server up
-																						</a>
-																						<span class="m-list-timeline__time">
-																							5 hrs
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge m-list-timeline__badge--state1-info"></span>
-																						<a href="" class="m-list-timeline__text">
-																							New order received
-																						</a>
-																						<span class="m-list-timeline__time">
-																							7 hrs
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge m-list-timeline__badge--state1-info"></span>
-																						<a href="" class="m-list-timeline__text">
-																							System shutdown
-																						</a>
-																						<span class="m-list-timeline__time">
-																							11 mins
-																						</span>
-																					</div>
-																					<div class="m-list-timeline__item">
-																						<span class="m-list-timeline__badge m-list-timeline__badge--state1-info"></span>
-																						<a href="" class="m-list-timeline__text">
-																							Production server down
-																						</a>
-																						<span class="m-list-timeline__time">
-																							3 hrs
-																						</span>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="tab-pane" id="topbar_notifications_logs" role="tabpanel">
-																		<div class="m-stack m-stack--ver m-stack--general" style="min-height: 180px;">
-																			<div class="m-stack__item m-stack__item--center m-stack__item--middle">
-																				<span class="">
-																					All caught up!
-																					<br>
-																					No new logs.
-																				</span>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li class="m-nav__item m-topbar__quick-actions m-topbar__quick-actions--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push m-dropdown--mobile-full-width m-dropdown--skin-light"  data-dropdown-toggle="click">
-												<a href="#" class="m-nav__link m-dropdown__toggle">
-													<span class="m-nav__link-badge m-badge m-badge--dot m-badge--info m--hide"></span>
-													<span class="m-nav__link-icon">
-														<span class="m-nav__link-icon-wrapper">
-															<i class="flaticon-share"></i>
-														</span>
-													</span>
-												</a>
-												<div class="m-dropdown__wrapper">
-													<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
-													<div class="m-dropdown__inner">
-														<div class="m-dropdown__header m--align-center" style="background: url(/assets/images/quick_actions_bg.jpg); background-size: cover;">
-															<span class="m-dropdown__header-title">
-																Quick Actions
-															</span>
-															<span class="m-dropdown__header-subtitle">
-																Shortcuts
-															</span>
-														</div>
-														<div class="m-dropdown__body m-dropdown__body--paddingless">
-															<div class="m-dropdown__content">
-																<div class="m-scrollable" data-scrollable="false" data-max-height="380" data-mobile-max-height="200">
-																	<div class="m-nav-grid m-nav-grid--skin-light">
-																		<div class="m-nav-grid__row">
-																			<a href="#" class="m-nav-grid__item">
-																				<i class="m-nav-grid__icon flaticon-file"></i>
-																				<span class="m-nav-grid__text">
-																					Generate Report
-																				</span>
-																			</a>
-																			<a href="#" class="m-nav-grid__item">
-																				<i class="m-nav-grid__icon flaticon-time"></i>
-																				<span class="m-nav-grid__text">
-																					Add New Event
-																				</span>
-																			</a>
-																		</div>
-																		<div class="m-nav-grid__row">
-																			<a href="#" class="m-nav-grid__item">
-																				<i class="m-nav-grid__icon flaticon-folder"></i>
-																				<span class="m-nav-grid__text">
-																					Create New Task
-																				</span>
-																			</a>
-																			<a href="#" class="m-nav-grid__item">
-																				<i class="m-nav-grid__icon flaticon-clipboard"></i>
-																				<span class="m-nav-grid__text">
-																					Completed Tasks
-																				</span>
-																			</a>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
 											<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
 												<a href="#" class="m-nav__link m-dropdown__toggle">
 													{{-- <span class="m-topbar__welcome">
@@ -520,19 +239,19 @@
 												</span>
 											</a>
 										</li>
-										<li class="m-menu__item @if(Route::currentRouteName()=='admin.setting.appearance') m-menu__item--active @endif"  aria-haspopup="true">
+										{{-- <li class="m-menu__item @if(Route::currentRouteName()=='admin.setting.appearance') m-menu__item--active @endif"  aria-haspopup="true">
 											<a  href="{{route('admin.setting.appearance')}}" class="m-menu__link ">
 												<span class="m-menu__item-here"></span>
 												<span class="m-menu__link-text">
 													Setting
 												</span>
 											</a>
-										</li>
+										</li> --}}
 										<li class="m-menu__item @if(Route::currentRouteName()=='admin.manage.video') m-menu__item--active @endif"  aria-haspopup="true">
 											<a  href="{{route('admin.manage.video')}}" class="m-menu__link ">
 												<span class="m-menu__item-here"></span>
 												<span class="m-menu__link-text">
-													Video
+													Trees
 												</span>
 											</a>
 										</li>

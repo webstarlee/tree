@@ -10,7 +10,7 @@ var DatatableAutoColumnHideDemo = function() {
         type: 'remote',
         source: {
 			read: {
-				url: '/admin/manage/video/getdatas',
+				url: '/admin/manage/tree/getdatas',
                 method: 'GET',
 			},
 		},
