@@ -14,7 +14,7 @@ var DatatableAutoColumnHideDemo = function() {
                 method: 'GET',
 			},
 		},
-        pageSize: 10,
+        pageSize: 5,
       },
 
       // column sorting
@@ -28,7 +28,7 @@ var DatatableAutoColumnHideDemo = function() {
           // pagination
           pagination: {
             // page size select
-            pageSizeSelect: [10, 20, 30, 50, 100],
+            pageSizeSelect: [5,10, 20, 30, 50, 100],
           },
         },
       },
@@ -47,42 +47,32 @@ var DatatableAutoColumnHideDemo = function() {
           textAlign: 'center',
           selector: {class: 'm-checkbox--solid m-checkbox--brand'}
         }, {
-          field: 'video_title',
-          title: 'Video Title',
+          field: 'Common_Name',
+          title: 'Common Name',
+          width: 200,
+          template: function(row, index, datatable){
+              return '\
+              <a class="employee-manage-unsername-select" href="/admin/manage/tree/detail/'+row.id+'" target="_blank" title="'+row.Common_Name+'">'+row.Common_Name+'</a>\
+              ';
+          },
+        }, {
+          field: 'Scientific_Name',
+          title: 'Scientific Name',
           width: 200,
         }, {
-          field: 'vdeo_url',
-          title: 'Video Url',
-          width: 300,
-          template: function(row) {
-              return '\
-              <a href="https://youtu.be/'+row.video_id+'" target="_blank" title="View ">\
-                https://youtu.be/'+row.video_id+'\
-              </a>\
-              ';
-          }
+          field: 'Genus',
+          title: 'Genus',
+          width: 150,
         }, {
-          field: 'video_description',
-          title: 'Description',
-          width: 300
-        }, {
-            field: "Actions",
-            width: 80,
-            title: i18n.language.action,
-            sortable: false,
-            overflow: 'visible',
-            template: function (row, index, datatable) {
-                var dropup = (datatable.getPageSize() - index) <= 4 ? 'dropup' : '';
-
-                return '\
-                <a href="javascript:;" data-video_id="'+row.id+'" class="m-video-edit-btn m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="View ">\
-                <i class="la la-edit"></i>\
-                </a>\
-                <a href="javascript:;" data-video_id="'+row.id+'" class="m-video-delete-btn m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="View ">\
-                <i class="la la-trash"></i>\
-                </a>\
-                ';
-            }
+          field: 'Species',
+          title: 'Species',
+          width: 150,
+          responsive: {visible: 'lg'},
+        },{
+            field: 'Campus_Location',
+            title: 'Campus Location',
+            width: 300,
+            responsive: {visible: 'xl'},
         }],
     });
 

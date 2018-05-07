@@ -247,8 +247,8 @@
 												</span>
 											</a>
 										</li> --}}
-										<li class="m-menu__item @if(Route::currentRouteName()=='admin.manage.video') m-menu__item--active @endif"  aria-haspopup="true">
-											<a  href="{{route('admin.manage.video')}}" class="m-menu__link ">
+										<li class="m-menu__item @if(Route::currentRouteName()=='admin.manage.tree' || Route::currentRouteName()=='admin.manage.tree.detail') m-menu__item--active @endif"  aria-haspopup="true">
+											<a  href="{{route('admin.manage.tree')}}" class="m-menu__link ">
 												<span class="m-menu__item-here"></span>
 												<span class="m-menu__link-text">
 													Trees
@@ -304,7 +304,7 @@
 					@yield('left_sidebar')
 					<div class="m-grid__item m-grid__item--fluid m-wrapper">
 						<!-- BEGIN: Subheader -->
-						<div class="m-subheader ">
+						<div class="m-subheader " style="padding-top: 20px;">
 							<div class="d-flex align-items-center">
 								<div class="mr-auto">
 									<h3 class="m-subheader__title ">

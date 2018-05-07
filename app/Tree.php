@@ -4,7 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Video extends Model
+class Tree extends Model
 {
     //
+
+    public $timestamps = false;
 }

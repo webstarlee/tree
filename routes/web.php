@@ -123,12 +123,16 @@ Route::prefix('admin')->group(function () {
         Route::get('manage/delete/employee/{uniqueid}', 'Admin\adminController@deleteEmployee');
         //end
         //video management
-        Route::get('manage/tree', 'Admin\VideoController@viewVideo')->name('admin.manage.video');
-        Route::get('manage/tree/getdatas', 'Admin\VideoController@getVideoData');
-        Route::post('manage/new/tree', 'Admin\VideoController@storeVideo')->name('admin.add.new.video');
-        Route::post('manage/update/video', 'Admin\VideoController@updateVideo')->name('admin.update.video');
-        Route::get('manage/get-video/{id}', 'Admin\VideoController@getSingleVideo');
-        Route::get('manage/delete/video/{id}', 'Admin\VideoController@deleteVideo');
+        Route::get('manage/tree', 'Admin\TreeController@viewVideo')->name('admin.manage.tree');
+        Route::get('manage/tree/getdatas', 'Admin\TreeController@getTreeData');
+        Route::get('manage/tree/detail/{id}', 'Admin\TreeController@treeDeatail')->name('admin.manage.tree.detail');
+        Route::post('manage/new/tree', 'Admin\TreeController@storeTree')->name('admin.add.new.tree');
+        Route::post('manage/update/tree/image', 'Admin\TreeController@updateTreeImage')->name('admin.update.tree.image');
+        Route::post('manage/update/tree/basic', 'Admin\TreeController@updateTreeBasic')->name('admin.update.tree.basic');
+        Route::post('manage/update/tree/history', 'Admin\TreeController@updateTreeHistory')->name('admin.update.tree.history');
+        Route::post('manage/update/tree/location', 'Admin\TreeController@updateTreeLocation')->name('admin.update.tree.location');
+        Route::get('manage/get-video/{id}', 'Admin\TreeController@getSingleVideo');
+        Route::get('manage/delete/video/{id}', 'Admin\TreeController@deleteVideo');
         //end
         //setting
         Route::get('setting/appearance', 'Admin\SettingController@index')->name('admin.setting.appearance');
