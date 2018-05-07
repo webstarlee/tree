@@ -19,9 +19,9 @@ class AdminsTableSeeder extends Seeder
 
         $admins = [
             [
-                'first_name' => 'Gene',
-                'last_name' => 'Sibbett',
-                'username' => 'Gene',
+                'first_name' => 'Super',
+                'last_name' => 'Admin',
+                'username' => 'Admin',
                 'unique_id' => str_random(10),
                 'email' => 'admin@mail.com',
                 'password' => bcrypt('secret'),

@@ -5,8 +5,11 @@ namespace App\Http\Controllers\User;
 use Auth;
 use DateTime;
 use App\Slim;
+use App\Tree;
 use App\User;
 use App\Admin;
+use App\Review;
+use App\Favorite;
 use App\Mail\ContactUs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -311,12 +314,12 @@ class UserController extends Controller
 
     public function film()
     {
-        return view('user.film');
+        return view('user.info');
     }
 
     public function howItWork()
     {
-        return view('user.how');
+        return view('user.favorite');
     }
 
     public function sendContactEmail(Request $request)
@@ -331,5 +334,57 @@ class UserController extends Controller
             return "fail";
         }
         return "success";
+    }
+
+    public function getsingleTree($id)
+    {
+        $tree = Tree::find($id);
+        if ($tree) {
+            $html = view('user.treeDetailUser',compact('tree'))->render();
+            return response()->json(['html'=>$html, "result" => "success"]);
+        }
+        return response()->json(["result" => "fail"]);
+    }
+
+    public function addFavoriteTree($id)
+    {
+        $tree = Tree::find($id);
+        if ($tree) {
+            $isfavorite = Favorite::where('tree_id', $tree->id)->where('user_id', Auth::user()->id)->first();
+            if ($isfavorite) {
+                $isfavorite->delete();
+                return "removed";
+            } else {
+                $favorite = new Favorite;
+                $favorite->user_id = Auth::user()->id;
+                $favorite->tree_id = $tree->id;
+                $favorite->save();
+
+                return "added";
+            }
+        }
+        return "fail";
+    }
+
+    public function addReviewTree(Request $request)
+    {
+        $tree = Tree::find($request->tree_id);
+        if ($tree) {
+            $review = new Review;
+            $review->tree_id = $tree->id;
+            $review->user_id = Auth::user()->id;
+            $review->review = $request->tree_review;
+            $review->save();
+
+            $html = view('user.treeReview',compact('tree'))->render();
+            return response()->json(['html'=>$html, "result" => "success"]);
+        }
+        return response()->json(["result" => "fail"]);
+    }
+
+    public function favoriteTrees()
+    {
+        $trees = Favorite::where('user_id', Auth::user()->id)->join('trees', 'trees.id', '=', 'favorites.tree_id')->select('trees.*')->get();
+        return $trees;
     }
 }

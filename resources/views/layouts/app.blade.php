@@ -258,7 +258,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!-- end::Horizontal Menu -->
 								</div>
 							</div>
-							<div class="m-content" style="padding-top: 50px;">
+							<div class="m-content" style="padding: 50px 25px;">
 								@yield('content')
 							</div>
 						</div>

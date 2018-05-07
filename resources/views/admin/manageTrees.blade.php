@@ -8,10 +8,6 @@ Manage Tree
 Tree Management
 @endsection
 
-@section('customStyle')
-<link href="/css/addAdminWizard.css" rel="stylesheet" type="text/css" />
-@endsection
-
 @section('content')
     <div class="m-portlet m-portlet--mobile">
 		<div class="m-portlet__head">
@@ -170,17 +166,5 @@ Tree Management
 @endsection
 @section('customScript')
     <script src="/js/datatable/loadTreesData.js" type="text/javascript"></script>
-    <script type="text/javascript">
-
-        $('.input_mask_date').datepicker({
-            todayHighlight: true,
-            autoclose: true,
-            orientation: "bottom left",
-            templates: {
-                leftArrow: '<i class="la la-angle-left"></i>',
-                rightArrow: '<i class="la la-angle-right"></i>'
-            }
-        });
-    </script>
     <script src="/js/customManage.js" type="text/javascript"></script>
 @endsection

@@ -83,6 +83,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('profile/update/unique', 'User\UserController@updateEmployeeUnique');
     Route::post('profile/update/info', 'User\UserController@updateEmployeeInfo');
     Route::post('profile/update/password', 'User\UserController@updateEmployeePassOwn');
+    Route::get('/tree/get-single/{id}', 'User\UserController@getsingleTree');
+    Route::get('/tree/addFavorite/{id}', 'User\UserController@addFavoriteTree');
+    Route::post('/tree/addReview', 'User\UserController@addReviewTree')->name('tree.review.store');
+    Route::get('/tree/favorite/getdatas', 'User\UserController@favoriteTrees');
 });
 
 Route::prefix('admin')->group(function () {
@@ -124,7 +128,6 @@ Route::prefix('admin')->group(function () {
         //end
         //video management
         Route::get('manage/tree', 'Admin\TreeController@viewVideo')->name('admin.manage.tree');
-        Route::get('manage/tree/getdatas', 'Admin\TreeController@getTreeData');
         Route::get('manage/tree/detail/{id}', 'Admin\TreeController@treeDeatail')->name('admin.manage.tree.detail');
         Route::post('manage/new/tree', 'Admin\TreeController@storeTree')->name('admin.add.new.tree');
         Route::post('manage/update/tree/image', 'Admin\TreeController@updateTreeImage')->name('admin.update.tree.image');
@@ -143,6 +146,8 @@ Route::prefix('admin')->group(function () {
         Route::post('setting/update/vacation-rule', 'Admin\SettingController@update_vacation_rule')->name('admin.setting.update.vacation');
         Route::get('setting/update/custom-breaktime/{status}', 'Admin\SettingController@update_custom_break')->name('admin.setting.update.breaktime.custom');
     });
+
+    Route::get('manage/tree/getdatas', 'Admin\TreeController@getTreeData');
 
     Route::get('login', 'Admin\Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('login', 'Admin\Auth\AdminLoginController@login');
