@@ -328,6 +328,7 @@ Tree Detail
             label: i18n.language.profile.drop_your_img_here,
             statusImageTooSmall: i18n.language.profile.image_too_small_slim,
         });
+        user_cover_cropper.size = { width:960, height:720 };
     </script>
     <script src="/js/customProfile.js" type="text/javascript"></script>
 @endsection
